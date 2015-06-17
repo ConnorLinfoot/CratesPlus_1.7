@@ -1,0 +1,13 @@
+name: CratesPlus
+description: A free and great crates plugin for Minecraft. This version does support Bukkit 1.7
+main: com.connorlinfoot.cratesplus.CratesPlus
+version: ${project.version}
+commands:
+  crate:
+    description: Main CratesPlus command
+    aliases: [cratesplus,crates]
+permissions:
+  cratesplus.admin:
+    default: op
+  cratesplus.updates:
+    default: op
