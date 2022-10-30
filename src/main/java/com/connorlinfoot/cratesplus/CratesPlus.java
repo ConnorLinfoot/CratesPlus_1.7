@@ -87,12 +87,11 @@ public class CratesPlus extends JavaPlugin implements Listener {
             console.sendMessage("");
         }
 
-        if (configBackup != null && Bukkit.getOnlinePlayers().size() > 0) {
-            for (Player player : Bukkit.getOnlinePlayers()) {
-                if (player.hasPermission("cratesplus.admin")) {
-                    player.sendMessage(pluginPrefix + ChatColor.GREEN + "Your config has been updated. Your old config was backed up to " + configBackup);
-                    configBackup = null;
-                }
+        for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+            if (player.hasPermission("cratesplus.admin")) {
+                player.sendMessage(pluginPrefix + ChatColor.GREEN + "Your config has been updated. Your old config was backed up to " + configBackup);
+                configBackup = null;
+
             }
         }
     }
